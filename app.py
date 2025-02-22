@@ -20,7 +20,7 @@ def get_users():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute('SELECT * FROM usuariosflask;')
-    users = cur.fetchAll()
+    users = cur.fetchall()
     cur.close()
     conn.close()
     return jsonify(users)
